@@ -1,0 +1,58 @@
+html{
+    font-size: 32px;
+}
+
+body{
+    margin: 0px;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+}
+
+.nav{
+    display: flex;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    justify-content: space-around;
+    align-items: center;
+    height: 75px;
+    background-color: rgb(197, 185, 185);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 700px;
+    background: url(./tower.jpg) repeat center center fixed;
+    background-size: cover, cover;
+}
+
+.main-content{
+    margin: 50px;
+    min-height: 600px;
+    min-width: 600px;
+    background-color: rgba(255, 255, 255, 0.548);
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-size: .75rem;
+}
+
+.nav-button-1,.nav-button-2,.nav-button-3{
+    padding: 5px;
+    cursor: pointer;
+}
