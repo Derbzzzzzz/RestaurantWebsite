@@ -44,11 +44,17 @@ function createNavButton3(){
 function createMain(){
     const main = document.createElement('main')
 
-    const mainContent = document.createElement('div')
-    mainContent.classList.add('main-content')
-    main.appendChild(mainContent)
+    
+    main.appendChild(createMainContent())
 
     return main
+}
+
+function createMainContent(){
+    const mainContent = document.createElement('div')
+    mainContent.classList.add('main-content')
+    
+    return mainContent
 }
 
 function createFooter(){
