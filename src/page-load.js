@@ -1,45 +1,74 @@
-const content = document.getElementById('content')
+function createHeader(){
+    const header = document.createElement('div')
+    header.classList.add('header')
+    header.textContent = 'Derbz au Château'
 
-// Header
-const header = document.createElement('div')
-header.classList.add('header')
-header.textContent = 'Derbz au Château'
+    return header
+}
 
-//Nav
-const nav = document.createElement('div')
-nav.classList.add('nav')
+function createNav(){
+    const nav = document.createElement('div')
+    nav.classList.add('nav')
 
-//Nav Buttons
-const navButton1 = document.createElement('div')
-navButton1.classList.add('nav-button-1')
-navButton1.textContent = 'Home'
+    nav.appendChild(createNavButton1())
+    nav.appendChild(createNavButton2())
+    nav.appendChild(createNavButton3())
 
-const navButton2 = document.createElement('div')
-navButton2.classList.add('nav-button-2')
-navButton2.textContent = 'Menu'
+    return nav
+}
 
-const navButton3 = document.createElement('div')
-navButton3.classList.add('nav-button-3')
-navButton3.textContent = 'Contact'
+function createNavButton1(){
+    const navButton1 = document.createElement('div')
+    navButton1.classList.add('nav-button-1')
+    navButton1.textContent = 'Home'
 
-nav.appendChild(navButton1)
-nav.appendChild(navButton2)
-nav.appendChild(navButton3)
+    return navButton1
+}
 
-//Main
-const main = document.createElement('main')
+function createNavButton2(){
+    const navButton2 = document.createElement('div')
+    navButton2.classList.add('nav-button-2')
+    navButton2.textContent = 'Menu'
 
-const mainContent = document.createElement('div')
-mainContent.classList.add('main-content')
-main.appendChild(mainContent)
+    return navButton2
+}
 
-//Footer
-const footer = document.createElement('footer')
-footer.classList.add('footer')
-footer.textContent = 'Copyright © 2022 Derbzzzzzz'
+function createNavButton3(){
+    const navButton3 = document.createElement('div')
+    navButton3.classList.add('nav-button-3')
+    navButton3.textContent = 'Contact'
 
-// Appending elements to main content container
-content.appendChild(header)
-content.appendChild(nav)
-content.appendChild(main)
-content.appendChild(footer)
+    return navButton3
+}
+
+function createMain(){
+    const main = document.createElement('main')
+
+    const mainContent = document.createElement('div')
+    mainContent.classList.add('main-content')
+    main.appendChild(mainContent)
+
+    return main
+}
+
+function createFooter(){
+    const footer = document.createElement('footer')
+    footer.classList.add('footer')
+    footer.textContent = 'Copyright © 2022 Derbzzzzzz'
+
+    return footer;
+}
+
+
+function loadPage(){
+    const content = document.getElementById('content')
+
+    // Appending elements to main content container
+    content.appendChild(createHeader())
+    content.appendChild(createNav())
+    content.appendChild(createMain())
+    content.appendChild(createFooter())
+}
+
+export default loadPage;
+
