@@ -1,3 +1,13 @@
+import loadContact from './tab-loaders/contact.js';
+import loadHome from './tab-loaders/home.js';
+
+function removeAllChildNodes(parent){
+    while(parent.firstChild){
+        parent.removeChild(parent.firstChild)
+    }
+}
+
+
 function createHeader(){
     const header = document.createElement('div')
     header.classList.add('header')
@@ -22,6 +32,11 @@ function createNavButton1(){
     navButton1.classList.add('nav-button-1')
     navButton1.textContent = 'Home'
 
+    navButton1.addEventListener('click', function(){
+        removeAllChildNodes(document.querySelector('.main-content'))
+        loadHome()
+    })
+
     return navButton1
 }
 
@@ -30,6 +45,8 @@ function createNavButton2(){
     navButton2.classList.add('nav-button-2')
     navButton2.textContent = 'Menu'
 
+    
+
     return navButton2
 }
 
@@ -37,6 +54,11 @@ function createNavButton3(){
     const navButton3 = document.createElement('div')
     navButton3.classList.add('nav-button-3')
     navButton3.textContent = 'Contact'
+
+    navButton3.addEventListener('click', function(){
+            removeAllChildNodes(document.querySelector('.main-content'))
+            loadContact()
+        })
 
     return navButton3
 }
