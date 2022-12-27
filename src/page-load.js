@@ -1,5 +1,6 @@
 import loadContact from './tab-loaders/contact.js';
 import loadHome from './tab-loaders/home.js';
+import loadMenu from './tab-loaders/menu.js';
 
 function removeAllChildNodes(parent){
     while(parent.firstChild){
@@ -45,7 +46,10 @@ function createNavButton2(){
     navButton2.classList.add('nav-button-2')
     navButton2.textContent = 'Menu'
 
-    
+    navButton2.addEventListener('click', function(){
+        removeAllChildNodes(document.querySelector('.main-content'))
+        loadMenu()
+    })
 
     return navButton2
 }
