@@ -94,11 +94,12 @@ main{
 }
 
 .menu-item-header{
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 
 .menu-item-desc{
+    font-size: .75rem;
     font-style: italic;
     text-align: center;
 }

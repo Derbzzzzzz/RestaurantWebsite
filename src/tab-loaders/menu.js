@@ -58,12 +58,39 @@ function createMenuItem2Desc(){
     return item2Desc
 }
 
+function createMenuItem3(){
+    const item3 = document.createElement("div")
+    item3.classList.add("menu-item")
+
+    item3.appendChild(createMenuItem3Header())
+    item3.appendChild(createMenuItem3Desc())
+
+    return item3
+}
+
+function createMenuItem3Header(){
+    const item3Header = document.createElement("div")
+    item3Header.classList.add("menu-item-header")
+    item3Header.textContent = "Nutella Crêpe"
+
+    return item3Header
+}
+
+function createMenuItem3Desc(){
+    const item3Desc = document.createElement("div")
+    item3Desc.classList.add("menu-item-desc")
+    item3Desc.textContent = "A traditional crepe slathered in a hazelnut and chocolate spread"
+
+    return item3Desc
+}
+
 function loadMenu(){
     const mainContent = document.querySelector('.main-content')
 
     mainContent.appendChild(createMenuHeader())
     mainContent.appendChild(createMenuItem1())
     mainContent.appendChild(createMenuItem2())
+    mainContent.appendChild(createMenuItem3())
 
 }
 
